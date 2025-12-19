@@ -1,0 +1,77 @@
+.header {
+    padding: 24px 0;
+    height: 100px;
+    background-color: $dark-blue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    &__nav {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {
+            width: 50px;
+            height: 50px;
+            img {
+                width: 100%;
+            }
+        }
+        &__list {
+            display: flex;
+            gap: 75px;
+            @media (max-width: 991px) {
+                background-color: $dark-blue;
+                position: fixed;
+                width: 70vw;
+                height: 70vh;
+                right: -800px;
+
+            }
+            .header__nav__link {
+                display: none;
+            }
+            .link {
+                color: $white;
+                font-size: 18px;
+                position: relative;
+                &::before {
+                    transition: all 0.3s ease;
+                    content: '';
+                    width: 7px;
+                    height: 7px;
+                    background-color: $dark-blue;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+                &:hover::before {
+                    background-color: $white;
+                }
+            }
+        }
+        &__link {
+            @media (max-width: 991px) {
+               display: none;
+            }
+            @include button($blue, 15px 40px, $white, 8px);
+        }
+        &__bar{
+            display: none;
+            width: 70px;
+            height: 60px;
+            background-color: $blue;
+            border-radius: 8px;
+            .header__nav__list:has(.header__nav__bar:hover){
+                right: 0px;
+            }
+             @media (max-width: 991px) {
+               display: block;
+               font-size: 30px;
+               color: $white;
+            }
+        }
+    }
+}

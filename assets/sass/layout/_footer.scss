@@ -1,0 +1,98 @@
+.footer {
+    padding: 60px 0;
+    background-color: $dark-blue;
+    position: relative;
+    &__nav {
+        display: flex;
+        gap: 190px;
+        flex-wrap: wrap;
+        @media (max-width: 991px) {
+            gap: 30px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @media (max-width: 991px) {
+                margin: 0 auto;
+            }
+            .logo {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                color: white;
+                img {
+                    width: 40px;
+                    height: 43px;
+                }
+            }
+            .wrap {
+                display: flex;
+                gap: 10px;
+                a {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    i {
+                        color: $blue;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        &__list {
+            display: flex;
+            gap: 170px;
+            margin-bottom: 40px;
+            @media (max-width: 991px) {
+                flex-direction: column;
+                gap: 35px;
+            }
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+                a{
+                    position: relative;
+                }
+                a::before{
+                    transition: all 0.3s ease;
+                    content: '';
+                    height: 2px;
+                    background-color: $white;
+                    position: absolute;
+                    width: 0%;
+                    bottom: -7px;
+                    left: 0;
+
+                }
+                a:hover::before{
+                    width: 100%;
+                }
+                &__title {
+                    @include cardTitle(400, $white);
+                }
+                &__link {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .line {
+        width: 100%;
+        background-color: #1d292f;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+}

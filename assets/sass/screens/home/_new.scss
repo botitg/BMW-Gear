@@ -1,0 +1,101 @@
+.new {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__title {
+            text-align: center;
+            @include content(500, $black);
+        }
+        &__info {
+            text-align: center;
+            font-style: 18px;
+            color: $light-gray;
+        }
+        &__wrap{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 40px;
+            .card{
+                border-radius: 8px;
+                background-color: $white;
+                padding: 25px;
+                box-shadow: 0px 0px 4px 0px #00000040;
+                min-width: 400px;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                &:nth-child(3){
+                    .card__el__wrap{
+                        .subtitle{
+                            color: $blue;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    .card__el__wrap{
+                        .subtitle{
+                            color: $yellow;
+                        }
+                    }
+                }
+                &:hover{
+                    .card__img {
+
+                        transform: scale(1.2);
+                    }
+
+                }
+                &__img {
+                    width: 120px;
+                    height: 120px;
+                    background-color: #F5F5F5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    img {
+                        width: 65px;
+                        height: 100px;
+                    }
+                }
+                &__el {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    
+                    &__wrap{
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 10px;
+                        .title{
+                            @include cardTitle(500, $black)
+                        }
+                        .subtitle{
+                            color: $green;
+                        }
+                    }
+                    &__wrapper{
+                        display: flex;
+                        gap: 15px;
+                        .link{
+                            @include button($light-blue, 7px 20px, $blue, 8px);
+                            font-weight: 500;
+                        }
+                    }
+                }
+                margin-bottom: 30px;
+
+            }
+        }
+        &__link {
+            @include button($gray, 17px 45px, $white, 10px);
+            margin: 0 auto;
+        }
+    }
+}

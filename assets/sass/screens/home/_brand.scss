@@ -1,0 +1,40 @@
+.brand {
+    padding: 70px 0;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__title {
+            @include content(500, $black);
+            text-align: center;
+        }
+        &__text {
+            color: $light-gray;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        &__wrap{
+            display: flex;
+            gap: 25px;
+            margin: 0 auto;
+            flex-wrap: wrap ;
+            .card{
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                min-width: 300px ;
+                flex: 1;
+                img {
+                    width: 110px;
+                    margin: 0 auto  ;
+                }
+                &__text{
+                    color: $light-gray;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

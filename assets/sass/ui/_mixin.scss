@@ -1,0 +1,64 @@
+@mixin title($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 40px;
+    @media (max-width: 991px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 26px;
+    }
+}
+@mixin content($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 36px;
+    @media (max-width: 767px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
+}
+@mixin cardTitle($weight, $color) {
+    font-size: 26px;
+    color: $color;
+    font-weight: $weight;
+    @media (max-width: 767px) {
+        font-size: 22px;
+    }
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
+}
+@mixin text($weight, $color) {
+    font-size: 17px;
+    color: $color;
+    font-weight: $weight;
+
+    @media (max-width: 575px) {
+        font-size: 15px;
+    }
+}
+@mixin button($bg, $padding, $color, $radius) {
+    border-radius: $radius;
+    color: $color;
+    padding: $padding;
+    background-color: $bg;
+    border: 2px solid $bg;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: transparent;
+        color: $bg;
+        border: 2px solid $bg;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}

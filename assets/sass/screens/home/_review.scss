@@ -1,0 +1,75 @@
+.review {
+    padding: 80px 0;
+    background-color: #F9F9F9;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__title {
+            text-align: center;
+            @include content(500, $black);
+        }
+        &__text {
+            color: $light-gray;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        &__wrap {
+            margin: 0 auto;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                border: 1px solid #DEDEDE;
+                background-color: $white;
+                min-width: 300px;
+                flex: 1;
+                &__icons {
+                    display: flex;
+                    gap: 5px;
+                    color: $yellow;
+                    i {
+                        &:nth-child(5) {
+                            color: #F9F9F9;
+                            
+                        }
+                    }
+                }
+                &__text{
+                    color: $light-gray;
+                }
+                &__wrap{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    &__img {
+                        img {
+                            width: 65px;
+                            height: 65px;
+                            border-radius: 50%;
+                        }
+                    }
+                    &__el {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+                        .title{
+                            font-weight: 500;
+
+                        }
+                        .info{
+                            font-weight: 400;
+                            color: $light-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
