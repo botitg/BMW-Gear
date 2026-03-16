@@ -1,0 +1,29 @@
+.grow {
+    padding: 100px 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 77px;
+        &__head {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+            
+            .title {
+                @include title(600, $gray);
+            }
+            .text {
+                @include text(400, $light-gray);
+                margin: 0 auto;
+                width: 55%;
+            }
+            .img {
+                img{
+                    width: 820px;
+                    height: 505px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.product {
+    padding: 100px 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &__head {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+            .title {
+                @include title(600, $gray);
+            }
+            .text {
+                @include text(400, $light-gray);
+            }
+        }
+        &__wrapper {
+            display: flex;
+            gap: 80px;
+            .card {
+                min-width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+                &__wrap {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    &__title {
+                        @include cardTitle(600, $dark-blue);
+                    }
+                    &__info {
+                        @include text(400, $blue);
+                        margin-bottom: 10px;
+                    }
+                    &__about {
+                        @include text(400, $gray);
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                    &__link{
+                        margin-top: 30px;
+                        @include text(400, $dark-blue)
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,6 @@
         @media (max-width: 991px) {
             gap: 30px;
             flex-direction: column;
-            text-align: center;
         }
 
         &__logo {
@@ -54,8 +53,11 @@
             @media (max-width: 991px) {
                 flex-direction: column;
                 gap: 35px;
+                text-align: center;
+                align-items: center;
             }
             .item {
+                text-align: center;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;

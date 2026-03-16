@@ -26,7 +26,6 @@
                 width: 70vw;
                 height: 70vh;
                 right: -800px;
-
             }
             .header__nav__link {
                 display: none;
@@ -47,6 +46,7 @@
                     left: 50%;
                     transform: translate(-50%);
                 }
+
                 &:hover::before {
                     background-color: $white;
                 }
@@ -54,24 +54,27 @@
         }
         &__link {
             @media (max-width: 991px) {
-               display: none;
+                display: none;
             }
-            @include button($blue, 15px 40px, $white, 8px);
+            @include button($blue, 12px 40px, $white, 8px);
         }
-        &__bar{
+        &__bar {
             display: none;
             width: 70px;
             height: 60px;
             background-color: $blue;
             border-radius: 8px;
-            .header__nav__list:has(.header__nav__bar:hover){
+            .header__nav__list:has(.header__nav__bar:hover) {
                 right: 0px;
             }
-             @media (max-width: 991px) {
-               display: block;
-               font-size: 30px;
-               color: $white;
+            @media (max-width: 991px) {
+                display: block;
+                font-size: 30px;
+                color: $white;
             }
         }
     }
+}
+.actNav::before {
+    background-color: $white !important;
 }

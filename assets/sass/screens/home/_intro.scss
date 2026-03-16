@@ -1,8 +1,9 @@
 .intro {
     padding: 70px 0;
     margin-top: 100px;
-    background-color: red;
+    background-color: #1F2E35;
     &__content {
+        
         display: flex;
         gap: 60px;
         align-items: center;
@@ -12,11 +13,16 @@
         }
         &__el {
             display: flex;
+            align-items: flex-start;
             flex-direction: column;
             gap: 20px;
-            align-items: flex-start;
             min-width: 300px;
             flex: 1;
+            @media (max-width: 991px) {
+                align-items: center;
+                text-align: center;
+            
+        }
             .title {
                 @include title(500, $white);
                 width: 80%;
